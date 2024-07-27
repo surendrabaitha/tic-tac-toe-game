@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J' || event.key === 'C')) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'F12') {
+                event.preventDefault();
+            }
+        });
+        
+            </script>
+
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="board" id="board"></div>
+
+        <div id="message" class="message"></div>
+
+
+        <div id="btnLeft">
+            <button id="resetBtn" onclick="resetGame()">Reset / Play Again</button>
+        </div>
+      
+        <div id="swipe">
+ <h6>Play Tic Tac Toe Game Here..! <span>Place your spot first in the table</span></h6>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
